@@ -7,7 +7,8 @@ Pod::Spec.new do |s|
   s.source        =  { :git => 'https://github.com/bosmacs/Fragaria.git' }
   s.source_files  =  'NS*.{h,m}', 'MG*.{h,m}', 'ICU*.{h,m}', 'SML*.{h,m}', 'FRA*.{h,m}'
   s.exclude_files =  'DB*.{h,m}', 'MGSPreferencesController.{h,m}', 'FragariaAppDelegate.{h,m}'
-  s.resources     =  'SML*.xib', 'Syntax Definitions/*.plist', 'SyntaxDefinitions.plist'
+  s.resources     =  'SML*.xib', 'Syntax Definitions', 'SyntaxDefinitions.plist'
+  #s.resource_bundles = { "Fragaria" => ['SML*.xib', 'Syntax Definitions/*.plist', 'SyntaxDefinitions.plist'] }
   s.requires_arc  =  true
   s.platform      =  :osx
   s.library       =  'icucore'
