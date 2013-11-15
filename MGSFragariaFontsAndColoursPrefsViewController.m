@@ -59,4 +59,23 @@
 	NSFont *panelFont = [fontManager convertFont:[fontManager selectedFont]];
 	[SMLDefaults setValue:[NSArchiver archivedDataWithRootObject:panelFont] forKey:MGSFragariaPrefsTextFont];
 }
+
+#pragma mark -
+#pragma mark MASPreferencesViewController
+
+- (NSString*)identifier
+{
+    return @"MGSPreferencesFontsAndColours";
+}
+
+- (NSImage*)toolbarItemImage
+{
+    return [NSImage imageNamed:NSImageNameFontPanel];
+}
+
+- (NSString*)toolbarItemLabel
+{
+    return NSLocalizedString(@"Fonts & Colors", @"Toolbar item name for the fonts and colors preference pane");
+}
+
 @end
