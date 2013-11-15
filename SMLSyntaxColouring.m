@@ -1789,6 +1789,7 @@ NSString *SMLSyntaxDefinitionIncludeInKeywordEndCharacterSet = @"includeInKeywor
     NSString* text = [self completeString];
     
     // Clear all highlights
+    // FIXME: this breaks highlight current line
     [firstLayoutManager removeTemporaryAttribute:NSBackgroundColorAttributeName forCharacterRange:NSMakeRange(0, text.length)];
     
     // Clear all buttons
@@ -1827,7 +1828,7 @@ NSString *SMLSyntaxDefinitionIncludeInKeywordEndCharacterSet = @"includeInKeywor
             [highlightedRows addObject:[NSNumber numberWithInt:err.line]];
             
             // Add highlight for background
-            [firstLayoutManager addTemporaryAttribute:NSBackgroundColorAttributeName value:[NSColor colorWithCalibratedRed:1 green:1 blue:0.7 alpha:1] forCharacterRange:lineRange];
+            [firstLayoutManager addTemporaryAttribute:NSBackgroundColorAttributeName value:[NSColor colorWithCalibratedRed:1 green:0.7 blue:0.7 alpha:1] forCharacterRange:lineRange];
             
             [firstLayoutManager addTemporaryAttribute:NSToolTipAttributeName value:err.description forCharacterRange:lineRange];
             
