@@ -252,6 +252,14 @@
 	</dict>
 	<dict>
 		<key>name</key>
+		<string>GLSL</string>
+		<key>file</key>
+		<string>glsl</string>
+		<key>extensions</key>
+		<string>glsl vsh fsh gsh tsh vert frag geom</string>
+	</dict>
+	<dict>
+		<key>name</key>
 		<string>GNU Assembler</string>
 		<key>file</key>
 		<string>gnuassembler</string>
