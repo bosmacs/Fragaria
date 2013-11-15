@@ -63,7 +63,7 @@
 		<string>uint</string>
 		<string>float</string>
 		<string>double</string>
-		<string>vec3</string>
+		<string>vec2</string>
 		<string>vec3</string>
 		<string>vec4</string>
 		<string>dvec2</string>
