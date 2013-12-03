@@ -372,15 +372,15 @@ forStartingGlyphAtIndex:(NSUInteger)glyphIndex
         lineRefs = [NSMutableArray arrayWithCapacity:kNewLineLine+1];
         
         NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:tabCharacter attributes:defAttributes];
-        CTLineRef textLine = CTLineCreateWithAttributedString((CFAttributedStringRef)attrString);
+        CTLineRef textLine = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef)attrString);
         [lineRefs addObject:(id)CFBridgingRelease(textLine)]; // kTabLine
         
         attrString = [[NSAttributedString alloc] initWithString:spaceCharacter attributes:defAttributes];
-        textLine = CTLineCreateWithAttributedString((CFAttributedStringRef)attrString);
+        textLine = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef)attrString);
         [lineRefs addObject:(id)CFBridgingRelease(textLine)]; // kSpaceLine
         
         attrString = [[NSAttributedString alloc] initWithString:newLineCharacter attributes:defAttributes];
-        textLine = CTLineCreateWithAttributedString((CFAttributedStringRef)attrString);
+        textLine = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef)attrString);
         [lineRefs addObject:(id)CFBridgingRelease(textLine)]; // kNewLineLine
     }
     
